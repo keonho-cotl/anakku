@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>POV: You’re Seonghyeon’s Mom</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="phone">
+      <!-- 1 WELCOME -->
+      <section class="page on" id="p-welcome">
+        <div class="bgp" id="wbg"></div>
+        <div class="center">
+          <h1 class="serif">Welcome to Seonghyeon’s Mom’s Phone!</h1>
+          <input
+            class="inp"
+            id="nm"
+            placeholder="Enter your name..."
+            maxlength="24"
+            autocomplete="off"
+          />
+          <div class="err" id="nerr"></div>
+          <button class="btn" id="go1">Let’s Explore</button>
+        </div>
+      </section>
+      <!-- 2 MUSIC -->
+      <section class="page" id="p-music">
+        <div class="bgp"></div>
+        <div class="center" style="justify-content: center; text-align: center" id="mbox">
+          <div class="disc">🎵</div>
+          <div class="vis"><i></i><i></i><i></i><i></i><i></i></div>
+          <h1 class="serif" style="font-size: 26px">
+            Before opening this phone, play this song first.
+          </h1>
+          <p>
+            Listen to this song while exploring all the memories. Some moments are worth remembering
+            forever.
+          </p>
+          <p><b>Segenap Hati</b><br />Jumbo</p>
+          <button class="btn" id="mplay">▶ Play Music</button>
+          <button class="btn sec" id="mpr" style="display: none">⏸ Pause</button>
+          <div class="err" id="merr"></div>
+          <label class="lnk" id="mfile" style="display: none"
+            >Pilih file lagu dari perangkat<input type="file" accept="audio/*" id="mpick" hidden
+          /></label>
+          <button class="btn" id="enter" style="display: none">Open the phone</button>
+          <button class="lnk" id="skip" style="display: none">Lanjut tanpa musik</button>
+        </div>
+      </section>
+      <!-- 3 LOCKSCREEN -->
+      <section class="page" id="p-lock">
+        <div class="bgp" id="lbg"></div>
+        <div id="lockc"><small id="ld"></small><b id="lh">09:41</b></div>
+        <button id="unlock"><span aria-hidden="true">⌃</span>Geser ke atas untuk membuka</button>
+        <div id="pin">
+          <b class="serif">Masukkan PIN</b>
+          <div id="dots"><i></i><i></i><i></i><i></i></div>
+          <small id="perr"></small>
+          <div id="keys"></div>
+          <button id="pback">Batal</button>
+        </div>
+      </section>
+      <!-- 4 OS -->
+      <section class="page" id="os">
+        <div id="wall"></div>
+        <div id="sb">
+          <span id="sbt">9:41</span
+          ><span
+            >📶
+            <svg
+              width="15"
+              height="12"
+              viewBox="0 0 15 12"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+              <path d="M1 4a9 9 0 0113 0M3.5 6.8a5.5 5.5 0 018 0M6 9.4a2 2 0 013 0" />
+            </svg>
+            <svg width="24" height="12" viewBox="0 0 24 12">
+              <rect x=".5" y=".5" width="20" height="11" rx="3" fill="none" stroke="currentColor" />
+              <rect x="2.5" y="2.5" width="13" height="7" rx="1.5" fill="currentColor" />
+              <rect x="21.5" y="4" width="2" height="4" rx="1" fill="currentColor" /></svg
+          ></span>
+        </div>
+        <div id="clock"><b id="hm">09:41</b><small id="dt"></small></div>
+        <div id="grid">
+          <button class="ic" data-app="gallery">
+            <i style="background: #f5c76b">🖼️</i>Gallery
+          </button>
+          <button class="ic" data-app="facebook">
+            <i style="background: #1877f2; color: #fff; font-weight: 700; font-family: Georgia">f</i
+            >Facebook
+          </button>
+          <button class="ic" data-app="music"><i style="background: #e9806e">🎵</i>Music</button>
+          <button class="ic" data-app="settings">
+            <i style="background: #8e9aa6">⚙️</i>Settings
+          </button>
+        </div>
+        <div class="app" id="app-gallery">
+          <div class="hd">
+            <button id="gback" style="display: none" aria-label="Kembali ke album">‹</button
+            ><span id="gt">Album</span>
+          </div>
+          <div class="scr" id="gal"></div>
+        </div>
+        <div class="app" id="app-facebook" style="background: #f0ece4">
+          <div class="fbh"><b>facebook</b><small id="who"></small></div>
+          <div class="scr" id="feed"></div>
+        </div>
+        <div class="app" id="app-music">
+          <div class="hd">Music</div>
+          <div class="scr mus" id="mapp">
+            <div class="disc">🎵</div>
+            <div class="vis"><i></i><i></i><i></i><i></i><i></i></div>
+            <div><b>Segenap Hati</b><br /><span style="color: var(--mute)">Jumbo</span></div>
+            <button class="btn" id="mp2">▶ Play</button
+            ><label style="color: var(--acc); text-decoration: underline; font-size: 14px"
+              >Ganti file lagu<input type="file" accept="audio/*" id="mpick2" hidden
+            /></label>
+          </div>
+        </div>
+        <div class="app" id="app-settings">
+          <div class="hd">Settings</div>
+          <div class="scr" id="setp"></div>
+        </div>
+        <div id="nav">
+          <button id="nb" aria-label="Kembali">◁</button><button id="nh" aria-label="Home">○</button
+          ><button id="nr" aria-label="Aplikasi terbuka">▢</button>
+        </div>
+        <div id="rec">
+          <div id="rl" style="width: 100%; display: flex; flex-direction: column; gap: 12px"></div>
+          <button class="btn sec" id="rclose">Tutup semua</button>
+        </div>
+        <div id="sheet">
+          <div>
+            <b style="display: block; margin-bottom: 6px">Bagikan postingan</b
+            ><button data-s="Dibagikan ke linimasa kamu">🌐 Bagikan sekarang</button
+            ><button data-s="Dikirim lewat Messenger">💬 Kirim di Messenger</button
+            ><button data-s="Tautan disalin">🔗 Salin tautan</button
+            ><button data-s="">Batal</button>
+          </div>
+        </div>
+        <div id="lb">
+          <div style="display: flex; justify-content: space-between; padding: 6px 16px">
+            <button id="lbx" style="font-size: 16px">✕ Tutup</button
+            ><small id="lbc" style="opacity: 0.7; align-self: center"></small>
+          </div>
+          <div id="lbm">
+            <div class="box" id="lbb"></div>
+            <button class="arr" id="lbp" style="left: 14px" aria-label="Foto sebelumnya">‹</button
+            ><button class="arr" id="lbn" style="right: 14px" aria-label="Foto berikutnya">
+              ›
+            </button>
+          </div>
+          <div id="lbi"><b id="lbd"></b><span id="lbt"></span></div>
+        </div>
+        <div id="bright"></div>
+      </section>
+      <div id="toast"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
